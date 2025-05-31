@@ -100,5 +100,4 @@ async def trocar(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(f"Troca concluída entre você e {destinatario}!")
 
-trocar_handler = CommandHandler('trocar', trocar
-
+trocar_handler = CommandHandler('trocar', trocar)
