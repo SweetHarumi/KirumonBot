@@ -4,7 +4,7 @@ import json
 import os
 
 # Caminho para a imagem fixa do gacha (coloque uma imagem no seu /images chamada gacha_cover.jpg)
-GACHA_IMAGE_PATH = 'images/https://c4.wallpaperflare.com/wallpaper/264/666/478/3-316-16-9-aspect-ratio-s-sfw-wallpaper-preview.jpg'
+GACHA_IMAGE_PATH = 'images/Gacha.jpg'
 
 # Exemplo de categorias fixas
 CATEGORIAS = [
