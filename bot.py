@@ -6,7 +6,7 @@ import os
 
 # Importa os handlers (funções que respondem aos comandos)
 from handlers.start import start_handler
-from handlers.tiro import tiro_handler, categoria_callback_handler, subcategoria_callback_handler
+from handlers.tiro import tiro_handler, categoria_callback_handler
 from handlers.inventario import inventario_handler
 from handlers.admin import addcarta_handler, removercarta_handler, dartiros_handler, darmoedas_handler
 from handlers.doar import doar_handler
