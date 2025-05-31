@@ -9,7 +9,7 @@ CARDS_FILE = "data/cards.json"
 USERS_FILE = "data/users.json"
 
 # Coloque aqui o ID do admin (você). Você pode usar vários se quiser.
-ADMIN_IDS = [123456789]  # ⬅️ Substitua pelo seu ID real
+ADMIN_IDS = [7692205354]  # ⬅️ Substitua pelo seu ID real
 
 def is_admin(user_id):
     return user_id in ADMIN_IDS
