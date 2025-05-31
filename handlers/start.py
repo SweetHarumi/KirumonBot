@@ -2,20 +2,12 @@
 
 from telegram import Update
 from telegram.ext import CommandHandler, ContextTypes
-import random
 
-# Frases para responder quando o usuário enviar /start
-FRASES = [
-    "Estou vivo!",
-    "Oi! Estou aqui para o gacha!",
-    "Bot online e pronto!",
-    "Bem-vindo ao Gacha Bot!",
-]
-
+# Função que será executada quando o usuário digitar /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    frase = random.choice(FRASES)
-    await update.message.reply_text(frase)
+    await update.message.reply_text(
+        "✨ Olá! Eu sou o bot gacha mágico. Use /tiro para tentar a sorte com as cartas!"
+    )
 
-# Cria o handler do comando /start que vamos registrar no bot.py
-start_handler = CommandHandler('start', start)
-
+# Handler que será registrado no bot.py
+start_handler = CommandHandler("start", start)
