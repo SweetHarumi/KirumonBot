@@ -33,7 +33,7 @@ def main():
     app.add_handler(start_handler)
     app.add_handler(tiro_handler)
     app.add_handler(categoria_callback_handler)
-    app.add_handler(subcategoria_callback_handler)
+    # REMOVIDO: app.add_handler(subcategoria_callback_handler)
     app.add_handler(inventario_handler)
     app.add_handler(addcarta_handler)
     app.add_handler(removercarta_handler)
