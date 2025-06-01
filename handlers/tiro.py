@@ -45,10 +45,13 @@ async def categoria_callback(update: Update, context: ContextTypes.DEFAULT_TYPE)
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
-    await query.edit_message_text(
-        text=f"📂 Subcategorias de {categoria_escolhida.capitalize()}:",
-        reply_markup=reply_markup
-    )
+    novo_texto = f"📂 Subcategorias de {categoria_escolhida.capitalize()}:"
+
+    # Evita erro de mensagem não modificada
+    if query.message.text != novo_texto:
+        await query.edit_message_text(text=novo_texto, reply_markup=reply_markup)
+    else:
+        await query.edit_message_reply_markup(reply_markup=reply_markup)
 
 # Callback ao clicar em uma subcategoria (vai sortear uma carta - em breve)
 async def subcategoria_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -57,7 +60,6 @@ async def subcategoria_callback(update: Update, context: ContextTypes.DEFAULT_TY
 
     # No futuro, aqui será feito o sorteio real com imagem, nome, raridade, etc
     await query.edit_message_text("🃏 Em breve: sorteio da carta!")
-    
 
 # Exports para o bot.py
 tiro_handler = CommandHandler("tiro", tiro)
